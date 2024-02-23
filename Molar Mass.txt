@@ -1,0 +1,11 @@
+def calculate_molar_mass(formula, atomic_weights):
+    molar_mass = 0
+    for atom, count in count_atoms(formula).items():
+        molar_mass += atomic_weights.get(atom, 0) * count
+    return molar_mass
+
+# Example usage:
+atomic_weights = {'H': 1.008, 'O': 16.00, 'C': 12.01}
+chemical_formula = "H2O"
+molar_mass = calculate_molar_mass(chemical_formula, atomic_weights)
+print("Molar mass of", chemical_formula, ":", molar_mass, "g/mol")
